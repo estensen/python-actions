@@ -33,4 +33,6 @@ jobs:
         pip install pytest
         pytest
     - name: Run deployment script
-      run: python deploy.py
+      run: |
+        python create_deployment.py login estensen/login "login app"
+        python deploy.py

@@ -1,0 +1,3 @@
+id:
+  description: Hello world app
+  docker-image: estensen/hello.py

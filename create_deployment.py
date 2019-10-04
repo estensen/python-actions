@@ -2,15 +2,16 @@ import sys
 from yaml import load, dump
 
 
-if len(sys.argv) != 3:
+if len(sys.argv) != 4:
     exit("Missing docker-image and description")
 
-docker_image = sys.argv[1]
-description = sys.argv[2]
+name = sys.argv[1]
+docker_image = sys.argv[2]
+description = sys.argv[3]
 
-data = {"docker-image": docker_image, "description": description}
+data = {name: {"docker-image": docker_image, "description": description}}
 print("Adding deployment file...")
 print(data)
 
-with open("deploy.yaml", "w") as f:
+with open("pipeline.yaml", "w") as f:
     f.write(dump(data))
