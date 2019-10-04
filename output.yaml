@@ -1,0 +1,5 @@
+service:
+  docker-image: estensen/hello
+  environment:
+  - test
+  - prod
