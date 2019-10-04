@@ -1,9 +1,14 @@
+import sys
 from yaml import load, dump
 
+if len(sys.argv) != 3:
+    exit("Missing docker-image and description")
 
-with open("input.yaml", "r") as in_stream:
-    data = load(in_stream)
-    print(data)
+docker_image = sys.argv[1]
+description = sys.argv[2]
 
-    with open("output.yaml", "w") as out_stream:
-        out_stream.write(dump(data))
+data = {"docker-image": docker_image, "description": description}
+print(data)
+
+with open("deploy.yaml", "w") as f:
+    f.write(dump(data))
