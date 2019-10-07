@@ -32,16 +32,27 @@ jobs:
       run: |
         pip install pytest
         pytest
+
     - name: Run deployment script
       run: |
         python create_deployment.py login estensen/login "login app"
         python deploy.py
-    - name: Add changes
-      run: |
-        git add pipelines.yaml
-        git commit -m "Add config"
-    - name: Commit changes
-      uses: ad-m/github-push-action@master
+
+    - uses: actions/checkout@master
+    - name: auto-commit docker registry
+      uses: actions/docker/login@8cdf801b322af5f369e00d85e9cf3a7122f49108
+      env:
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+    - name: auto-commit action
+      uses: docker://cdssnc/touched-github-action:latest
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        directory: .
+        args: auto-commit/**
+    - name: build auto-commit
+      uses: actions/docker/cli@8cdf801b322af5f369e00d85e9cf3a7122f49108
+      with:
+        args: build -t cdssnc/auto-commit-github-action ./auto-commit
+    - name: push auto-commit
+      uses: actions/docker/cli@8cdf801b322af5f369e00d85e9cf3a7122f49108
+      with:
+        args: push cdssnc/auto-commit-github-action
