@@ -42,7 +42,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git commit -m "Update" -a
+        git commit -m "Add pipeline" -a
     - name: Commit
       uses: ad-m/github-push-action@master
       with:

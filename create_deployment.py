@@ -1,5 +1,5 @@
 import sys
-from yaml import load, dump
+from yaml import dump
 
 
 if len(sys.argv) != 4:
