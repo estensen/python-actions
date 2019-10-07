@@ -1,3 +1,6 @@
 id:
   description: Hello world app
   docker-image: estensen/hello.py
+login:
+  description: login app
+  docker-image: estensen/login
