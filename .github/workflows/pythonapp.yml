@@ -39,7 +39,10 @@ jobs:
         python deploy.py
 
     - name: Add changes
-      run: git commit -m "Update" -a
+      run: |
+        git config --local user.email "haavard.ae@gmail.com"
+        git config --local user.name "Bot"
+        git commit -m "Update" -a
     - name: Commit
       uses: ad-m/github-push-action@master
       with:
