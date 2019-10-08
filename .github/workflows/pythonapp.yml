@@ -30,7 +30,7 @@ jobs:
 
     - name: Run deployment script
       run: |
-        python create_deployment.py login estensen/login "login app"
+        python create_deployment.py auth5 estensen/login "login app"
         python deploy.py
 
     - name: Add changes
@@ -41,5 +41,10 @@ jobs:
 
     - name: Commit
       uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Merge and delete branch
+      uses: estensen/auto_merge_my_pull_requests@development
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
