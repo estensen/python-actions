@@ -7,6 +7,9 @@ auth2:
 auth3:
   description: hello world app
   docker-image: estensen/hello.py
+auth5:
+  description: login app
+  docker-image: estensen/login
 id:
   description: New id app
   docker-image: estensen/hello.py
