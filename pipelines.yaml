@@ -1,5 +1,14 @@
+auth:
+  description: hello world app
+  docker-image: estensen/hello.py
+auth2:
+  description: hello world app
+  docker-image: estensen/hello.py
+auth3:
+  description: hello world app
+  docker-image: estensen/hello.py
 id:
-  description: Hello world app
+  description: New id app
   docker-image: estensen/hello.py
 login:
   description: login app
