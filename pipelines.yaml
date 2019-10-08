@@ -16,6 +16,9 @@ auth6:
 auth7:
   description: login app
   docker-image: estensen/login
+auth8:
+  description: login app
+  docker-image: estensen/login
 id:
   description: New id app
   docker-image: estensen/hello.py
