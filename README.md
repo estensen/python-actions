@@ -9,6 +9,18 @@ $ pip3 install -r requirements.txt
 $ pre-commit install
 ```
 
+## Test locally
+```
+$ pytest
+============================ test session starts =============================
+...
+collected 1 item
+
+test_hello.py .                                                        [100%]
+
+============================= 1 passed in 0.01s ==============================
+```
+
 ## Run locally
 ```
 (venv) $ python3 create_deployment.py login estensen/login "login app"
