@@ -1,28 +1,28 @@
 from yaml import load, dump, Loader
 
 
-with open("pipelines.yaml", "a+") as pipelines:
-    pipelines.seek(0)  # Hack to both read and write
-    production_data = load(pipelines, Loader)
+with open("pipelines.yaml", "a+") as production_file:
+    production_file.seek(0)  # Hack to both read and write
+    pipelines = load(production_file, Loader)
 
-    if not production_data:
-        keys = set()
-        print("No pipelines in production")
-    else:
-        keys = set(production_data.keys())
-        print(f"Pipelines in producton: {keys}")
-
-    with open("pipeline.yaml", "r+") as pipeline:
-        data = load(pipeline, Loader)
-        if not data:
+    with open("pipeline.yaml", "r+") as deploy_file:
+        pipeline = load(deploy_file, Loader)
+        if not pipeline:
             exit("Empty deployment file")
 
-        name = list(data.keys())[0]
-        if keys and name in keys:
-            exit(f"Pipeline '{name}'' is already in production")
-            pipeline.truncate(0)
+        name = list(pipeline.keys())[0]
+        data = pipeline[name]
+        pipelines[name] = data
+
+        if not pipelines:
+            keys = set()
+            print("No pipelines in production")
+        else:
+            keys = set(pipelines.keys())
+            print(f"Pipelines in production: {keys}")
 
         print("Deploying...")
         print(f"Deployed {data}")
-        pipelines.write(dump(data))
-        pipeline.truncate(0)
+        production_file.truncate(0)  # Remove content from file
+        production_file.write(dump(pipelines))
+        deploy_file.truncate(0)
