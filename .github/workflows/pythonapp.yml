@@ -30,7 +30,7 @@ jobs:
 
     - name: Run deployment script
       run: |
-        python create_deployment.py auth5 estensen/login "login app"
+        python create_deployment.py auth6 estensen/login "login app"
         python deploy.py
 
     - name: Add changes
