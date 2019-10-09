@@ -1,3 +1,0 @@
-auth-v5:
-  description: auth app
-  docker-image: estensen/auth5
