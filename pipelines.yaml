@@ -1,6 +1,9 @@
 auth:
   description: hello world app
   docker-image: estensen/hello
+auth3:
+  description: auth
+  docker-image: estensen/auth-v4
 id:
   description: new id app
   docker-image: estensen/id
