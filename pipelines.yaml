@@ -1,6 +1,9 @@
 auth:
   description: hello world app
   docker-image: estensen/hello.py
+backgroun-worker:
+  description: bg worker
+  docker-image: estensen/bg
 id:
   description: New id app
   docker-image: estensen/hello.py
