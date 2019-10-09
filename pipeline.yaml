@@ -1,3 +1,0 @@
-auth-v4:
-  description: auth app
-  docker-image: estensen/auth4

@@ -7,6 +7,9 @@ auth-v2:
 auth-v3:
   description: auth app
   docker-image: estensen/auth3
+auth-v4:
+  description: auth app
+  docker-image: estensen/auth4
 auth3:
   description: auth
   docker-image: estensen/auth-v4
