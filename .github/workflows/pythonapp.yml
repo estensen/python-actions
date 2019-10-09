@@ -30,7 +30,7 @@ jobs:
 
     - name: Run deployment script
       run: |
-        python create_deployment.py auth9 estensen/login "login app"
+        python create_deployment.py backgroun-worker estensen/bg "bg worker"
         python deploy.py
 
     - name: Add changes

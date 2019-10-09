@@ -1,27 +1,6 @@
 auth:
   description: hello world app
   docker-image: estensen/hello.py
-auth2:
-  description: hello world app
-  docker-image: estensen/hello.py
-auth3:
-  description: hello world app
-  docker-image: estensen/hello.py
-auth5:
-  description: login app
-  docker-image: estensen/login
-auth6:
-  description: login app
-  docker-image: estensen/login
-auth7:
-  description: login app
-  docker-image: estensen/login
-auth8:
-  description: login app
-  docker-image: estensen/login
-auth9:
-  description: login app
-  docker-image: estensen/login
 id:
   description: New id app
   docker-image: estensen/hello.py
