@@ -30,7 +30,7 @@ jobs:
 
     - name: Run deployment script
       run: |
-        python create_deployment.py backgroun-worker estensen/bg "bg worker"
+        python create_deployment.py auth2 estensen/auth-v2 "auth"
         python deploy.py
 
     - name: Add changes
@@ -45,6 +45,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Merge and delete branch
-      uses: estensen/auto_merge_my_pull_requests@development
+      uses: estensen/auto_merge_my_pull_requests@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
