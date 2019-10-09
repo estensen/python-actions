@@ -1,0 +1,3 @@
+auth-v3:
+  description: auth app
+  docker-image: estensen/auth3
