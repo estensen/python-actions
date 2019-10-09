@@ -1,3 +1,3 @@
-auth-v4:
+auth-v5:
   description: auth app
-  docker-image: estensen/auth4
+  docker-image: estensen/auth5
