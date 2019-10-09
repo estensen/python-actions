@@ -12,9 +12,9 @@ with open("pipelines.yaml", "a+") as production_file:
 
         print("Deploying...")
         for pipeline in pipeline_updates:
-            print(pipeline)  # Or actually run a deployment script
             data = pipeline_updates[pipeline]
             deployed_pipelines[pipeline] = data
+            print(f"{pipeline} deployed")  # Or actually run a deployment script
 
         production_file.truncate(0)  # Remove content from file
         production_file.write(dump(deployed_pipelines))

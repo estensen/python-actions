@@ -35,8 +35,10 @@ Deployed {'login': {'docker-image': 'estensen/login', 'description': 'login app'
 ## Deploy
 Add deployment to `pipeline.yaml`:
 ```
-(venv) $ python3 create_deployment.py login estensen/login "login app"
+(venv) $  python3 create_deployment.py auth3 estensen/hello.py "hello world app"
 Adding deployment file...
+Deployment created!
+{'auth3': {'docker-image': 'estensen/hello.py', 'description': 'hello world app'}}
 ```
 
-Commit and push `pipeline.yaml`. An Action will run `deploy.py` which will put the pipeline into production and move the configuration to `pipelines.yaml` so all pipelines can be recreated with one deployment.
+Commit, push and create a pull request with `pipeline.yaml`. An Action will run `deploy.py` which will put the pipeline into production and move the configuration to `pipelines.yaml` so all pipelines can be recreated with one deployment later if necessary.

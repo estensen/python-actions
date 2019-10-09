@@ -11,7 +11,8 @@ description = sys.argv[3]
 
 data = {name: {"docker-image": docker_image, "description": description}}
 print("Adding deployment file...")
-print(data)
 
 with open("pipeline.yaml", "w") as f:
     f.write(dump(data))
+    print("Deployment created!")
+    print(data)

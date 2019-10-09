@@ -1,18 +1,9 @@
 auth:
   description: hello world app
-  docker-image: estensen/hello.py
-auth2:
-  description: auth
-  docker-image: estensen/auth-v2
-auth3:
-  description: auth
-  docker-image: estensen/auth-v4
-backgroun-worker:
-  description: bg worker
-  docker-image: estensen/bg
+  docker-image: estensen/hello
 id:
-  description: New id app
-  docker-image: estensen/hello.py
+  description: new id app
+  docker-image: estensen/id
 login:
   description: login app
   docker-image: estensen/login
