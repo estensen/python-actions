@@ -1,3 +1,0 @@
-auth-v2:
-  description: auth app
-  docker-image: estensen/auth2
