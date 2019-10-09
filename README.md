@@ -2,7 +2,7 @@
 Deploy pipelines automatically with GitHub Actions
 
 ## Deploy
-Add deployment to `pipeline.yaml`:
+Add deployment (currently dummy config) to `pipeline.yaml`:
 ```
 (venv) $  python3 create_deployment.py auth3 estensen/hello.py "hello world app"
 Adding deployment file...
