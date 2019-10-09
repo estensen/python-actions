@@ -6,7 +6,7 @@ auth2:
   docker-image: estensen/auth-v2
 auth3:
   description: auth
-  docker-image: estensen/auth-v3
+  docker-image: estensen/auth-v4
 backgroun-worker:
   description: bg worker
   docker-image: estensen/bg
