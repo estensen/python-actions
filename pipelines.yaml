@@ -1,6 +1,9 @@
 auth:
   description: hello world app
   docker-image: estensen/hello.py
+auth2:
+  description: auth
+  docker-image: estensen/auth-v2
 backgroun-worker:
   description: bg worker
   docker-image: estensen/bg
