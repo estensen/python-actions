@@ -30,7 +30,7 @@ jobs:
 
     - name: Run deployment script
       run: |
-        python create_deployment.py auth3 estensen/auth-v3 "auth"
+        python create_deployment.py auth3 estensen/auth-v4 "auth"
         python deploy.py
 
     - name: Add changes
