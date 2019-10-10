@@ -16,6 +16,9 @@ auth-v5:
 auth3:
   description: auth
   docker-image: estensen/auth-v4
+authr:
+  description: hello world app
+  docker-image: estensen/hello.py
 id:
   description: new id app
   docker-image: estensen/id
