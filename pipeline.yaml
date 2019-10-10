@@ -1,3 +1,0 @@
-authr:
-  description: hello world app
-  docker-image: estensen/hello.py
