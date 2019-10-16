@@ -25,3 +25,6 @@ id:
 login:
   description: login app
   docker-image: estensen/login
+pipeline:
+  description: such wow
+  image: huge image
