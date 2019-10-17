@@ -1,0 +1,3 @@
+auth3:
+  description: hello world app
+  docker-image: estensen/hello.py

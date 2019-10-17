@@ -44,8 +44,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.HEAD_REF }}
-
-    - name: Merge and delete branch
-      uses: estensen/auto_merge_my_pull_requests@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
