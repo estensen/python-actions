@@ -11,10 +11,21 @@ with open("pipelines.yaml", "a+") as production_file:
             exit("Empty deployment file")
 
         print("Deploying...")
+        changes = False
         for pipeline in pipeline_updates:
             data = pipeline_updates[pipeline]
+
+            if pipeline in deployed_pipelines:
+                old_data = deployed_pipelines[pipeline]
+                if data == old_data:
+                    continue
+
             deployed_pipelines[pipeline] = data
+            changes = True
             print(f"{pipeline} deployed")  # Or actually run a deployment script
+
+        if not changes:
+            print("Changes are already deployed")
 
         production_file.truncate(0)  # Remove content from file
         production_file.write(dump(deployed_pipelines))

@@ -1,33 +1,15 @@
 auth:
-  description: hello world app
-  docker-image: estensen/hello
+  description: authentication
+  docker-image: estensen/auth
 auth-v2:
-  description: auth app
+  description: authentication
   docker-image: estensen/auth2
-auth-v3:
-  description: auth app
-  docker-image: estensen/auth3
-auth-v4:
-  description: auth app
-  docker-image: estensen/auth4
-auth-v5:
-  description: auth app
-  docker-image: estensen/auth5
-auth3:
-  description: auth
-  docker-image: estensen/auth-v4
-authr:
-  description: hello world app
-  docker-image: estensen/hello.py
 id:
   description: new id app
   docker-image: estensen/id
 login:
   description: login app
   docker-image: estensen/login
-name:
-  description: new service
-  image: somewhere
 pipeline:
   description: such wow
   image: huge image
