@@ -1,4 +1,7 @@
 # python-actions
+
+![Build Status](https://github.com/estensen/python-actions/.github/workflows/ci.yml/badge.svg)
+
 Deploy pipelines automatically with GitHub Actions
 
 ## Install locally
