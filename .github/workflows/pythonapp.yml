@@ -38,14 +38,3 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Add pipeline" -a
-
-    - name: Commit
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.HEAD_REF }}
-
-    - name: Merge and delete branch
-      uses: estensen/auto_merge_my_pull_requests@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
