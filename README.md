@@ -1,6 +1,4 @@
-# python-actions
-
-![Build Status](https://github.com/estensen/python-actions/workflows/CI/badge.svg)
+# python-actions ![Build Status](https://github.com/estensen/python-actions/workflows/CI/badge.svg)
 
 Deploy pipelines automatically with GitHub Actions
 
