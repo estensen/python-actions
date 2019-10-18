@@ -1,4 +1,9 @@
+import sys
 from yaml import load, dump, Loader
+
+
+def neutral_exit():
+    sys.exit(0)
 
 
 with open("pipelines.yaml", "a+") as production_file:
@@ -8,7 +13,8 @@ with open("pipelines.yaml", "a+") as production_file:
     with open("pipeline.yaml", "r+") as deploy_file:
         pipeline_updates = load(deploy_file, Loader)
         if not pipeline_updates:
-            exit("Empty deployment file")
+            print("Empty deployment file")
+            neutral_exit()
 
         print("Deploying...")
         changes = False
