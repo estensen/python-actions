@@ -1,0 +1,23 @@
+name: Deploy Pipeline
+
+on:
+  pull_request:
+    branches:
+    - master
+    paths:
+    - 'pipeline.yaml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        ref: refs/heads/${{ github.head_ref }}
+
+    - name: Add reviewer to PR
+      uses: estensen/add-reviewer-action@master
+      with:
+        username: 'estensen'
+        github_token: ${{ secrets.GITHUB_TOKEN }}
