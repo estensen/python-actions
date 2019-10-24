@@ -4,6 +4,3 @@ auth3:
 id:
   description: new id app
   docker-image: estensen/id
-pipeline:
-  description: such wow
-  image: huge image
