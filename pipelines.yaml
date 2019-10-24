@@ -4,6 +4,3 @@ auth:
 auth-v2:
   description: authentication
   docker-image: estensen/auth2
-login:
-  description: login app
-  docker-image: estensen/login
