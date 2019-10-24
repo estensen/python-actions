@@ -10,3 +10,6 @@ login:
 pipeline:
   description: such wow
   image: huge image
+id:
+  description: new id app
+  docker-image: estensen/id
