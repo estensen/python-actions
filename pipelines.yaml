@@ -4,9 +4,6 @@ auth:
 auth-v2:
   description: authentication
   docker-image: estensen/auth2
-id:
-  description: new id app
-  docker-image: estensen/id
 login:
   description: login app
   docker-image: estensen/login
